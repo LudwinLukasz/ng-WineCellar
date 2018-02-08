@@ -1,3 +1,5 @@
+To run NgWineCellar with Spring Boot on server side run as "npm start" 
+
 # NgWineCellar
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
