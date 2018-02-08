@@ -1,0 +1,123 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4>Add new wine</h4>
+    </div>
+    <div class="panel-body">
+      <form #newWineForm="ngForm" (ngSubmit)="onWineSubmit(newWineForm.value)">
+        <div class="form-group col-sm-4">
+          <label for="name" class="">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Name"
+            name="name"
+            ngModel
+            required>
+        </div>
+        <div class="form-group col-sm-4">
+            <label for="producer" class="">Producer</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Producer"
+              name="producer"
+              ngModel
+              required>
+          </div>
+        <div class="form-group col-sm-2">
+          <label for="price" class="">Price</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Price"
+            name="price"
+            ngModel
+            required>
+        </div>
+        <div class="form-group col-sm-2">
+          <label for="sweetnes" class="">Sweetness</label>
+          <select
+            name="sweetness"
+            id="sweetness"
+            class="form-control"
+            ngModel
+            required>
+            <option
+              *ngFor="let sweetness of sweetnessTypes"
+              [value]="sweetness"> {{sweetness}}
+                <!-- {{ utilService.capitalize(sweetness) }} -->
+            </option>
+          </select>
+        </div>
+        <div class="form-group col-sm-5">
+          <label for="description" class="">Desciption</label>
+          <textarea
+            type="text"
+            class="form-control"
+            placeholder="Description"
+            name="description"
+            ngModel
+            required>
+          </textarea>
+        </div>
+        <div class="form-group col-sm-1">
+          <label for="colour" class="">Colour</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Col"
+            name="colour"
+            ngModel
+            required>
+        </div>
+        <div class="form-group col-sm-1">
+          <label for="vintage" class="">Vintage</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Year"
+            name="vintage"
+            ngModel
+            required>
+        </div>
+        <div class="form-group col-sm-1">
+          <label for="alcohol" class="">Alcohol</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Alc"
+            name="alcohol"
+            ngModel
+            required>
+        </div>
+        <div class="form-group col-sm-2">
+            <label for="variety" class="">Variety</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Variety"
+              name="variety"
+              ngModel
+              required>
+          </div>
+          <div class="form-group col-sm-2">
+              <label for="region" class="">Region</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Region"
+                name="region"
+                ngModel
+                required>
+            </div>
+        <div class="form-group col-sm-12">
+          <button
+            class="btn btn-primary listing-button"
+            type="submit"
+            ng-show="addWine">
+              Add
+          </button>
+        </div>
+      </form>
+    </div>  
+  </div>

@@ -1,0 +1,9 @@
+.thumbnail {
+    display: block;
+    height: 900px;
+    overflow:auto;
+  }
+  
+  .label {
+    display: inline-block;
+  }

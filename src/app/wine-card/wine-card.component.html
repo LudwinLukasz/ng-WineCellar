@@ -1,0 +1,66 @@
+<div class="thumbnail">
+    <img src="assets/images/{{ wine.image }}.jpg" alt="wine thumbnail">
+
+  <div class="caption">
+    <div *ngIf="!wine.showDetails">
+      <h3>
+          <i class="glyphicon glyphicon-glass"></i> 
+          {{ wine.name }}
+      </h3>
+      <h3>
+        <i class="glyphicon glyphicon-tag"></i> 
+          {{ wine.price | currency:'PLN':'symbol' }}
+      </h3>
+      <h4>
+        <i class="glyphicon glyphicon-asterisk"></i> 
+          {{ wine.producer }}
+      </h4>
+
+      <hr>
+
+      <button 
+        class="btn btn-sm btn-success"
+        *ngIf="!wine.showDetails"
+        (click)="wine.showDetails = !wine.showDetails">
+        Details
+      </button>
+
+    </div>
+
+    <div *ngIf="wine.showDetails">
+      <div class="details">
+        <h4>
+          <span class="label label-primary">
+            Colour: {{ wine.colour }}
+          </span>
+          <span class="label label-primary">
+            Sweetness: {{ wine.sweetness }}
+          </span>
+          <span class="label label-primary">
+            Variety: {{ wine.variety }}
+          </span>
+          <span class="label label-primary">
+            Alcohol: {{ wine.alcohol }}
+          </span>
+          <span class="label label-primary">
+            Region: {{ wine.region }}
+          </span>
+          <span class="label label-primary">
+            Vintage: {{ wine.vintage }}
+          </span>
+        </h4>
+
+        <p>{{ wine.description }}</p>
+
+        <hr>
+
+        <button
+          class="btn btn-sm btn-danger"
+          (click)="wine.showDetails = !wine.showDetails">
+          Close
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>
