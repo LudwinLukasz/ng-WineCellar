@@ -1,4 +1,4 @@
-To run NgWineCellar with Spring Boot on server side run as "npm start" 
+To run NgWineCellar with Spring Boot on server side run as "npm start" (ng server --proxy-config proxy.conf.json)
 
 # NgWineCellar
 
